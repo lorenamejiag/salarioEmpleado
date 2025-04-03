@@ -31,21 +31,50 @@ public class Main {
         double retencionPension = 0;
         double valorHora = 0;
         double cantidadHoras = 0;
+        double valorSalarioMinino = 0;
         double bonificacionEmpleado = 0;
         int auxilioTransporte = 200000;
 
-        System.out.println("Ingrese su usuario");
+        System.out.println("Ingrese su usuario: ");
         usuarioEmpleado = sc.nextLine();
-        System.out.println("Ingrese la contraseña");
+        System.out.println("Ingrese la contraseña: ");
         contraseñaUsuario = sc.nextLine();
         if (usuarioEmpleado.equals("admin") && contraseñaUsuario.equals("admin")) {
             System.out.println("Ha ingresado de forma correcta");
+            System.out.println("ingrese el nombre del empleado: ");
+            nombreEmpleado = sc.nextLine();
+            System.out.println("Ingrese su documento de identidad: ");
+            documentoIdentidad = sc.nextLine();
+            System.out.println("Ingrese el dia de descanso (de lunes a viernes): ");
+            diaDescanso = sc.nextLine();
+            System.out.println("Ingrese el valor de la hora: ");
+            valorHora = sc.nextDouble();
+            System.out.println("Ingrese la cantidad de horas trabajadas: ");
+            salarioBruto = valorHora * cantidadHoras;
+            System.out.println("Ingrese el salario minimo para este año");
+            valorSalarioMinino = sc.nextDouble();
+            if (salarioBruto > (valorSalarioMinino*2)){
+                bonificacionEmpleado = 0;
+            } else {
+                bonificacionEmpleado = salarioBruto*0.1;
+                auxilioTransporte = 200000;
+            }
+            salarioNeto = salarioBruto + bonificacionEmpleado +auxilioTransporte;
+            System.out.println("El salario neto es" + salarioNeto);
+
+
+
+
+
         }else{
                 System.out.println("Error de credenciales");
             }
 
         }
-        /*if (usuarioEmpleado.equals)*/
+        /*if (suarioEmpleado.equals("admin")){
+        if(contraseñaUsuario.equals("admin")){
+        system.out.println
+        * */
 
 
 
