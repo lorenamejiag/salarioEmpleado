@@ -59,8 +59,11 @@ public class Main {
                 bonificacionEmpleado = salarioBruto*0.1;
                 auxilioTransporte = 200000;
             }
-            salarioNeto = salarioBruto + bonificacionEmpleado +auxilioTransporte;
-            System.out.println("El salario neto es" + salarioNeto);
+            retencionSalud = salarioBruto * 0.04;
+            retencionPension = salarioBruto * 0.04;
+            salarioNeto = salarioBruto - retencionPension - retencionSalud + bonificacionEmpleado + auxilioTransporte;
+            System.out.println("detalle de nomina empleado");
+            System.out.println("el empleado " + nombreEmpleado + "con documento" + documentoIdentidad + "tiene el siguiente detalle :\nsalario bruto: " + salarioNeto + "\nsalario neto:" + salarioNeto + "\ndeduccion por pensión: " + retencionPension + "\nauxiolio transporte: " + auxilioTransporte + "\nbonificacion " + bonificacionEmpleado );
 
 
 
